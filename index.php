@@ -1,10 +1,6 @@
 <?php
-date_default_timezone_set('Europe/Amsterdam');
+date_default_timezone_set('America/Los_Angeles');
 $time = date("H:i");
-$morning = "6:00";
-$afternoon = "12:00";
-$evening = "18:00";
-$night = "00:00";
 ?>
 
 <!doctype html>
@@ -14,29 +10,31 @@ $night = "00:00";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+    <title>Goede php</title>
 </head>
-<body>
 
         <?php
-            if($time > $morning && $time < $afternoon){
-                echo "<body style= background-image:url('backgrounds/morning.png')>";
-                echo "<p>Goede morgen!</p>";
-                echo "<p>Het is nu: $time</p>";
-            } else if ($time > $afternoon && $time < $evening){
-                echo '<body style= background-image:url("backgrounds/afternoon.png")>';
-                echo "<p>Goede middag!</p>";
-                echo "<p>het is nu: $time";
-            } else if ($time > $evening && $time < $night){
-                echo '<body style= background-image:url("backgrounds/evening.png")>';
-                echo "<p>Goede avond!</p>";
-                echo "<p>het is nu: $time";
-            } else if ($time > $night && $time < $morning){
-                echo '<body style= background-image:url("backgrounds/night.png")>';
-                echo "<p>Goede nacht!</p>";
-                echo "<p>het is nu: $time";
+            if($time > "06:00" && $time < "12:00"){
+                echo "<body style= background-image:url('backgrounds/morning.png') class='BG'>";
+                echo "<p class='text1'>Goede morgen!</p>";
+                echo "<p class='text2'>Het is nu: $time</p>";
+                echo "<small id='small'>&#169 Jeffrey de Reus</small>";
+            } else if ($time > "12:00" && $time < "18:00"){
+                echo '<body style= background-image:url("backgrounds/afternoon.png") class="BG">';
+                echo "<p class='text1'>Goede middag!</p>";
+                echo "<p class='text2'>het is nu: $time";
+                echo "<small id='small'>&#169 Jeffrey de Reus</small>";
+            } else if ($time > "18:00" && $time < "23:59"){
+                echo '<body style= background-image:url("backgrounds/evening.png") class="BG">';
+                echo "<p class='text1'>Goede avond!</p>";
+                echo "<p class='text2'>het is nu: $time";
+                echo "<small id='small'>&#169 Jeffrey de Reus</small>";
+            } else {
+                echo '<body style= background-image:url("backgrounds/night.png") class="BG">';
+                echo "<p class='text1'>Goede nacht!</p>";
+                echo "<p class='text2'>het is nu: $time";
+                echo "<small id='small'>&#169 Jeffrey de Reus</small>";
             }
-
         ?>
-</body>
 </html>

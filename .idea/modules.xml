@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Goede php.iml" filepath="$PROJECT_DIR$/.idea/Goede php.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Madlibs/.idea/Madlibs.iml" filepath="$PROJECT_DIR$/../Madlibs/.idea/Madlibs.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/projects/jdereus/.idea/jdereus.iml" filepath="$USER_HOME$/Documents/projects/jdereus/.idea/jdereus.iml" />
+    </modules>
+  </component>
+</project>
